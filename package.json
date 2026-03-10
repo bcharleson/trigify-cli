@@ -1,0 +1,52 @@
+{
+  "name": "trigify-cli",
+  "version": "0.1.0",
+  "description": "CLI and MCP server for the Trigify.io social listening and signal intelligence platform",
+  "type": "module",
+  "bin": {
+    "trigify": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "AGENTS.md",
+    "CLAUDE.md"
+  ],
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "trigify",
+    "social-listening",
+    "signal-intelligence",
+    "linkedin",
+    "cli",
+    "mcp",
+    "ai-agent",
+    "outbound",
+    "gtm"
+  ],
+  "author": "Brandon Charleson",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bcharleson/trigify-cli.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^8.3.0",
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "commander": "^14.0.3",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
