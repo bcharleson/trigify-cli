@@ -1,6 +1,6 @@
 {
   "name": "trigify-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI and MCP server for the Trigify.io social listening and signal intelligence platform",
   "type": "module",
   "bin": {
