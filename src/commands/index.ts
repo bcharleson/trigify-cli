@@ -48,6 +48,20 @@ import { socialMappingCommand } from './social/mapping.js';
 // Enrich
 import { enrichCompanyCommand } from './enrich/company.js';
 
+// Company
+import { companyPostsCommand } from './company/posts.js';
+
+// X (Twitter) Actions
+import { xConnectCommand } from './x/connect.js';
+import { xLookupUserCommand } from './x/lookup-user.js';
+import { xCreatePostCommand } from './x/create-post.js';
+import { xLikePostCommand } from './x/like-post.js';
+import { xReplyCommand } from './x/reply.js';
+import { xRepostCommand } from './x/repost.js';
+import { xDeletePostCommand } from './x/delete-post.js';
+import { xFollowCommand } from './x/follow.js';
+import { xSendDmCommand } from './x/send-dm.js';
+
 /** All command definitions — the single source of truth for CLI + MCP */
 export const allCommands: CommandDefinition[] = [
   // Searches (Social Listening — Standard)
@@ -86,6 +100,20 @@ export const allCommands: CommandDefinition[] = [
 
   // Enrich (undocumented helpers)
   enrichCompanyCommand,
+
+  // Company (Enterprise)
+  companyPostsCommand,
+
+  // X (Twitter) Actions
+  xConnectCommand,
+  xLookupUserCommand,
+  xCreatePostCommand,
+  xLikePostCommand,
+  xReplyCommand,
+  xRepostCommand,
+  xDeletePostCommand,
+  xFollowCommand,
+  xSendDmCommand,
 ];
 
 export function registerAllCommands(program: Command): void {
